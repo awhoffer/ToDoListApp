@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="TitleViewAllLists">Lists</string>
+    <string name="FragmentAllListsSpeakableText">All Lists</string>
+    <string name="RecyclerItemShowListItemMetaDeleteSpeakableText">Delete</string>
+    <string name="ImageButtonAddListSpeakableText">Create List</string>
+    <string name="ImageButtonEditListSpeakableText">Edit List</string>
+    <string name="ButtonListSave">Done</string>
+    <string name="FragmentViewListEnterTitle">Untitled</string>
+    <string name="FragmentAllListsDoneEditing">Done</string>
+    <string name="FragmentAllListsDeleteDialogMessage">Are you sure you want to delete list?</string>
+    <string name="FragmentAllListsDeleteDialogDelete">Delete</string>
+    <string name="FragmentAllListsDeleteDialogCancel">Cancel</string>
+
+</resources>

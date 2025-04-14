@@ -1,0 +1,40 @@
+[versions]
+agp = "8.9.1"
+hiltAndroid = "2.52"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.8.0"
+constraintlayout = "2.2.1"
+navigationPluginVersion = "2.8.9"
+rxandroid = "3.0.2"
+rxjava = "3.1.10"
+room = "2.7.0"
+kspVersion = "2.1.20-1.0.32"
+
+[libraries]
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigationPluginVersion" }
+navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationPluginVersion" }
+navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigationPluginVersion" }
+rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
+rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
+room-runtime = {module = "androidx.room:room-runtime", version.ref = "room"}
+room-compiler = {module = "androidx.room:room-compiler", version.ref = "room"}
+room = {module="androidx.room:room-rxjava3", version.ref = "room"}
+hilt-android-compiler = {module="com.google.dagger:hilt-android-compiler", version.ref="hiltAndroid"}
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+safe-args = {id="androidx.navigation.safeargs", version.ref = "navigationPluginVersion"}
+hilt-android={id="com.google.dagger.hilt.android", version.ref="hiltAndroid"}
+ksp = {id="com.google.devtools.ksp", version.ref="kspVersion"}
