@@ -52,15 +52,16 @@ public class FragmentAllLists extends Fragment {
 
 
         viewModelList.getNoteAllNoteListsTitleIDLiveData().observe(getViewLifecycleOwner(), wrapperEventNoteListTitleIDS -> {
-            if(wrapperEventNoteListTitleIDS.contentIsNotHandled()) {
-            List<NoteListTitleID> noteListTitleIDS = wrapperEventNoteListTitleIDS.getContent();
+            if (wrapperEventNoteListTitleIDS.contentIsNotHandled()) {
+                List<NoteListTitleID> noteListTitleIDS = wrapperEventNoteListTitleIDS.getContent();
 
-            RecyclerViewAllListsAdapter recyclerViewAllListsAdapter = new RecyclerViewAllListsAdapter(noteListTitleIDS,materialAlertDialogDeleteBuilder,new InterfaceRecyclerViewNoteListItem() {
+                RecyclerViewAllListsAdapter recyclerViewAllListsAdapter = new RecyclerViewAllListsAdapter(noteListTitleIDS, materialAlertDialogDeleteBuilder, new InterfaceRecyclerViewNoteListItem() {
                     @Override
                     public void onDelete(int pId) {
 
                         viewModelList.deleteList(pId);
                     }
+
                     @Override
                     public void onClick(int pId, String pTitle) {
                         //sets the action argument which will pass the id of the note list to FragmentViewList
@@ -78,8 +79,7 @@ public class FragmentAllLists extends Fragment {
         });
 
         //On Click listener for the add list button. When navigating, this list will be a newly created list so we will add the default title as an argument.
-        imageButtonAddList.setOnClickListener(v-> navController.navigate(FragmentAllListsDirections.actionFragmentAllListsToFragmentViewList(getString(R.string.FragmentViewListEnterTitle))));
-
+        imageButtonAddList.setOnClickListener(v -> navController.navigate(FragmentAllListsDirections.actionFragmentAllListsToFragmentViewList(getString(R.string.FragmentViewListEnterTitle))));
 
 
     }

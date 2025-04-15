@@ -34,19 +34,17 @@ public class ActivityMain extends AppCompatActivity {
         navController.addOnDestinationChangedListener((controller, navDestination, bundle) -> {
             final int destination = navDestination.getId();
 
-            if(destination == R.id.fragmentAllLists){
+            if (destination == R.id.fragmentAllLists) {
                 toolbar.setVisibility(VISIBLE);
                 toolbar.setNavigationIcon(null);
                 mBinding.MaterialToolbarLists.setTitle(getString(R.string.TitleViewAllLists));
-            }else
-            if(destination == R.id.fragmentViewList){
+            } else if (destination == R.id.fragmentViewList) {
                 toolbar.setVisibility(GONE);
             }
 
         });
 
     }
-
 
 
 }

@@ -2,6 +2,7 @@ package com.example.todolist.data;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
 /// Entity for creating NoteList rows in Room
 @Entity
 public class NoteList {

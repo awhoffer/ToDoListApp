@@ -8,6 +8,7 @@ import java.util.List;
 
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Single;
+
 /// Data Access Object for retrieving NoteList from Room.
 @Dao
 public interface NoteListDao {
@@ -26,13 +27,14 @@ public interface NoteListDao {
     /// Deletes NoteList entry based on id
     @Query("DELETE FROM NoteList WHERE id=:id")
     Single<Integer> deleteNoteList(int id);
+
     /// Updates a NoteList entry's title
     @Query("UPDATE NoteList SET title=:title WHERE id=:id")
-    Completable updateNoteListTitle(int id,String title);
+    Completable updateNoteListTitle(int id, String title);
 
     /// Updates a NoteList entry's notes
     @Query("UPDATE NoteList SET notes=:notes WHERE id=:id")
-    Completable updateNoteListNotes(int id,String notes);
+    Completable updateNoteListNotes(int id, String notes);
 
 
 }
